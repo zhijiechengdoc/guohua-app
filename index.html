@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>墨韵丹青</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__seal">畫</div>
+      <div class="hero__text">
+        <p class="hero__eyebrow">中国国画 · 水墨演示</p>
+        <h1>墨韵丹青</h1>
+        <p class="hero__desc">
+          以宣纸为境，以墨色为韵。轻挥鼠标，即可在网页中体验带有水墨扩散感的国画笔触。
+        </p>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="controls">
+        <div class="panel">
+          <h2>笔意</h2>
+          <div class="preset-group">
+            <button class="preset is-active" data-preset="light">淡墨</button>
+            <button class="preset" data-preset="rich">浓墨</button>
+            <button class="preset" data-preset="dry">干笔</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>笔锋</h2>
+          <label class="range-field">
+            <span>粗细</span>
+            <input id="brushSize" type="range" min="6" max="42" value="20" />
+          </label>
+          <label class="range-field">
+            <span>水量</span>
+            <input id="inkFlow" type="range" min="20" max="100" value="68" />
+          </label>
+        </div>
+
+        <div class="panel panel--actions">
+          <h2>落笔</h2>
+          <button id="undoBtn">撤销</button>
+          <button id="clearBtn">清空</button>
+          <button id="exportBtn">导出 PNG</button>
+        </div>
+      </section>
+
+      <section class="canvas-panel">
+        <div class="canvas-panel__title">
+          <span>宣纸画案</span>
+          <span class="canvas-panel__hint">建议缓慢拖动，笔触更有水墨层次</span>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="paintCanvas" width="1100" height="720"></canvas>
+          <div class="signature">墨痕入纸 · 气韵生动</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
